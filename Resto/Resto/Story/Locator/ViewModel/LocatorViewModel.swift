@@ -12,12 +12,19 @@ class LocatorViewModel {
 
     // MARK: Model
 
+    fileprivate let locator: Locator
+
     // MARK: Outputs
 
     // MARK: Lifecycle
 
-    init() {
-
+    init(locator: Locator) {
+        self.locator = locator
     }
-    
+
+    // MARK: Actions
+
+    func findRestaurants() {
+        locator.findRestaurants()
+    }
 }

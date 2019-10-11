@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         // Coordination
 
-        let coordinator = MainCoordinator(window: window, viewModel: MainViewModel())
+        let coordinator = MainCoordinator(window: window, viewModel: MainViewModel(resto: Resto()))
         _ = coordinator.start()
 
         return true

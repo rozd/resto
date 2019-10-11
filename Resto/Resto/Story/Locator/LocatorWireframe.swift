@@ -11,10 +11,14 @@ import UIKit
 // MARK: Dependency Injection
 
 protocol LocatorAssembler {
-
+    func resolve() -> LocatorService
 }
 
 extension LocatorAssembler {
+
+    func resolve() -> LocatorService {
+        return GooglePlacesLocatorService()
+    }
 
 }
 

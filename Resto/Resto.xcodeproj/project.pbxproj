@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -24,6 +24,12 @@
 		50400BCC2350AFBD00386540 /* LocatorWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50400BCB2350AFBD00386540 /* LocatorWireframe.swift */; };
 		50400BCF2350B70D00386540 /* Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50400BCE2350B70D00386540 /* Context.swift */; };
 		50400BD12350B73400386540 /* MainWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50400BD02350B73400386540 /* MainWireframe.swift */; };
+		50400BD42350B8D800386540 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50400BD32350B8D800386540 /* Restaurant.swift */; };
+		50400BD62350B90900386540 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50400BD52350B90900386540 /* Entity.swift */; };
+		50400BD92350B95500386540 /* LocatorService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50400BD82350B95500386540 /* LocatorService.swift */; };
+		50400BDC2350C0BC00386540 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 50400BDB2350C0BC00386540 /* Alamofire */; };
+		50400BDF2350C1FC00386540 /* Locator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50400BDE2350C1FC00386540 /* Locator.swift */; };
+		50400BE22350C2F700386540 /* Resto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50400BE12350C2F700386540 /* Resto.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +51,11 @@
 		50400BCB2350AFBD00386540 /* LocatorWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocatorWireframe.swift; sourceTree = "<group>"; };
 		50400BCE2350B70D00386540 /* Context.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Context.swift; sourceTree = "<group>"; };
 		50400BD02350B73400386540 /* MainWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWireframe.swift; sourceTree = "<group>"; };
+		50400BD32350B8D800386540 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+		50400BD52350B90900386540 /* Entity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
+		50400BD82350B95500386540 /* LocatorService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocatorService.swift; sourceTree = "<group>"; };
+		50400BDE2350C1FC00386540 /* Locator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Locator.swift; sourceTree = "<group>"; };
+		50400BE12350C2F700386540 /* Resto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resto.swift; sourceTree = "<group>"; };
 		833AF7B45DF1AD6759F79F23 /* Pods-Resto.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Resto.debug.xcconfig"; path = "Target Support Files/Pods-Resto/Pods-Resto.debug.xcconfig"; sourceTree = "<group>"; };
 		E265FD107BECFA7E8EBE097D /* Pods-Resto.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Resto.release.xcconfig"; path = "Target Support Files/Pods-Resto/Pods-Resto.release.xcconfig"; sourceTree = "<group>"; };
 		F3FBE4EEAA0D37463BF2D144 /* Pods_Resto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Resto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -56,6 +67,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2518020C324108368C3ED7DD /* Pods_Resto.framework in Frameworks */,
+				50400BDC2350C0BC00386540 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +95,7 @@
 		50400B9D2350A76D00386540 /* Resto */ = {
 			isa = PBXGroup;
 			children = (
+				50400BD22350B8C500386540 /* Model */,
 				50400BBF2350ABF200386540 /* Library */,
 				50400BB22350A86100386540 /* Story */,
 				50400B9E2350A76D00386540 /* AppDelegate.swift */,
@@ -108,6 +121,8 @@
 		50400BB32350A86900386540 /* Locator */ = {
 			isa = PBXGroup;
 			children = (
+				50400BD72350B94200386540 /* Service */,
+				50400BDD2350C1ED00386540 /* Domain */,
 				50400BB62350A89700386540 /* ViewModel */,
 				50400BB52350A88F00386540 /* View */,
 				50400BB42350A88900386540 /* Storyboard */,
@@ -161,6 +176,7 @@
 		50400BC52350AC3F00386540 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				50400BE02350C2D800386540 /* Domain */,
 				50400BC82350AC6400386540 /* ViewModel */,
 				50400BC62350AC4C00386540 /* MainCoordinator.swift */,
 				50400BD02350B73400386540 /* MainWireframe.swift */,
@@ -182,6 +198,39 @@
 				50400BCE2350B70D00386540 /* Context.swift */,
 			);
 			path = "Dependency Injection";
+			sourceTree = "<group>";
+		};
+		50400BD22350B8C500386540 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				50400BD32350B8D800386540 /* Restaurant.swift */,
+				50400BD52350B90900386540 /* Entity.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		50400BD72350B94200386540 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				50400BD82350B95500386540 /* LocatorService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		50400BDD2350C1ED00386540 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				50400BDE2350C1FC00386540 /* Locator.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		50400BE02350C2D800386540 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				50400BE12350C2F700386540 /* Resto.swift */,
+			);
+			path = Domain;
 			sourceTree = "<group>";
 		};
 		9CCECD162AC99D987D8EEEBD /* Pods */ = {
@@ -219,6 +268,9 @@
 			dependencies = (
 			);
 			name = Resto;
+			packageProductDependencies = (
+				50400BDB2350C0BC00386540 /* Alamofire */,
+			);
 			productName = Resto;
 			productReference = 50400B9B2350A76D00386540 /* Resto.app */;
 			productType = "com.apple.product-type.application";
@@ -247,6 +299,9 @@
 				Base,
 			);
 			mainGroup = 50400B922350A76D00386540;
+			packageReferences = (
+				50400BDA2350C0BB00386540 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 50400B9C2350A76D00386540 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -321,12 +376,17 @@
 				50400BBC2350AB3800386540 /* LocatorViewController.swift in Sources */,
 				50400BC72350AC4C00386540 /* MainCoordinator.swift in Sources */,
 				50400BC42350AC3900386540 /* LocatorCoordinator.swift in Sources */,
+				50400BE22350C2F700386540 /* Resto.swift in Sources */,
 				50400BCF2350B70D00386540 /* Context.swift in Sources */,
 				50400BBE2350AB5800386540 /* LocatorViewModel.swift in Sources */,
 				50400BC22350AC2100386540 /* Coordinator.swift in Sources */,
 				50400BA32350A76D00386540 /* ViewController.swift in Sources */,
 				50400B9F2350A76D00386540 /* AppDelegate.swift in Sources */,
+				50400BD92350B95500386540 /* LocatorService.swift in Sources */,
+				50400BD42350B8D800386540 /* Restaurant.swift in Sources */,
 				50400BD12350B73400386540 /* MainWireframe.swift in Sources */,
+				50400BDF2350C1FC00386540 /* Locator.swift in Sources */,
+				50400BD62350B90900386540 /* Entity.swift in Sources */,
 				50400BCC2350AFBD00386540 /* LocatorWireframe.swift in Sources */,
 				50400BCA2350AC7000386540 /* MainViewModel.swift in Sources */,
 			);
@@ -530,6 +590,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		50400BDA2350C0BB00386540 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				branch = "5.0.0-rc.2";
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		50400BDB2350C0BC00386540 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 50400BDA2350C0BB00386540 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 50400B932350A76D00386540 /* Project object */;
 }

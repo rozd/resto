@@ -12,10 +12,12 @@ class MainViewModel {
 
     // MARK: Model
 
+    fileprivate let resto: Resto
+
     // MARK: Lifecycle
 
-    init() {
-
+    init(resto: Resto) {
+        self.resto = resto
     }
 }
 
@@ -24,7 +26,7 @@ class MainViewModel {
 extension MainViewModel {
 
     func createLocatorViewModel() -> LocatorViewModel {
-        return LocatorViewModel()
+        return LocatorViewModel(locator: resto.locator)
     }
     
 }
