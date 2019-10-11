@@ -36,6 +36,7 @@
 		50400BEC2350DEB800386540 /* MapKit+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50400BEB2350DEB800386540 /* MapKit+Helpers.swift */; };
 		50400BEE2350E0BA00386540 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50400BED2350E0BA00386540 /* Search.swift */; };
 		50400BF12350E9AD00386540 /* RestaurantAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50400BF02350E9AD00386540 /* RestaurantAnnotation.swift */; };
+		50400BF4235101A900386540 /* RestaurantAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50400BF3235101A900386540 /* RestaurantAnnotationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +68,7 @@
 		50400BEB2350DEB800386540 /* MapKit+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapKit+Helpers.swift"; sourceTree = "<group>"; };
 		50400BED2350E0BA00386540 /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
 		50400BF02350E9AD00386540 /* RestaurantAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantAnnotation.swift; sourceTree = "<group>"; };
+		50400BF3235101A900386540 /* RestaurantAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantAnnotationView.swift; sourceTree = "<group>"; };
 		833AF7B45DF1AD6759F79F23 /* Pods-Resto.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Resto.debug.xcconfig"; path = "Target Support Files/Pods-Resto/Pods-Resto.debug.xcconfig"; sourceTree = "<group>"; };
 		E265FD107BECFA7E8EBE097D /* Pods-Resto.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Resto.release.xcconfig"; path = "Target Support Files/Pods-Resto/Pods-Resto.release.xcconfig"; sourceTree = "<group>"; };
 		F3FBE4EEAA0D37463BF2D144 /* Pods_Resto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Resto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -155,6 +157,7 @@
 		50400BB52350A88F00386540 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				50400BF22351018C00386540 /* View */,
 				50400BBB2350AB3800386540 /* LocatorViewController.swift */,
 			);
 			path = View;
@@ -264,6 +267,14 @@
 				50400BF02350E9AD00386540 /* RestaurantAnnotation.swift */,
 			);
 			path = VO;
+			sourceTree = "<group>";
+		};
+		50400BF22351018C00386540 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				50400BF3235101A900386540 /* RestaurantAnnotationView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		9CCECD162AC99D987D8EEEBD /* Pods */ = {
@@ -416,6 +427,7 @@
 				50400BE22350C2F700386540 /* Resto.swift in Sources */,
 				50400BEA2350D55100386540 /* UIKit+Alert.swift in Sources */,
 				50400BCF2350B70D00386540 /* Context.swift in Sources */,
+				50400BF4235101A900386540 /* RestaurantAnnotationView.swift in Sources */,
 				50400BBE2350AB5800386540 /* LocatorViewModel.swift in Sources */,
 				50400BC22350AC2100386540 /* Coordinator.swift in Sources */,
 				50400BA32350A76D00386540 /* ViewController.swift in Sources */,

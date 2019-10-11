@@ -9,6 +9,7 @@
 import UIKit
 import CoreLocation
 import MapKit
+import Pulsator
 
 class LocatorViewController: UIViewController {
 
@@ -88,7 +89,7 @@ extension LocatorViewController {
     func map(centerAt location: CLLocation) {
         let coordinate = location.coordinate
 
-        let span = MKCoordinateSpan(latitudeDelta: 0.025, longitudeDelta: 0.025)
+        let span = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
         let region = MKCoordinateRegion(center: coordinate, span: span)
 
         mapView.setRegion(region, animated: true)
@@ -155,11 +156,12 @@ extension LocatorViewController: MKMapViewDelegate {
             return nil
         }
 
-        if let view = mapView.dequeueReusableAnnotationView(withIdentifier: annotation.reuseIdentifier) {
-            return view
+        if let marker = mapView.dequeueReusableAnnotationView(withIdentifier: annotation.reuseIdentifier) {
+            marker.clusteringIdentifier = annotation.clusteringIdentifer
+            return marker
         }
 
-        let marker = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: annotation.reuseIdentifier)
+        let marker = RestaurantAnnotationView(annotation: annotation, reuseIdentifier: annotation.reuseIdentifier)
         marker.clusteringIdentifier = annotation.clusteringIdentifer
         return marker
     }

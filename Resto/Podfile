@@ -7,4 +7,6 @@ target 'Resto' do
 
   pod 'Firebase/Analytics'
 
+  pod 'Pulsator'
+
 end
