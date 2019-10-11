@@ -26,4 +26,10 @@ extension Restaurant {
 
 }
 
-extension
+extension Array where Element == Restaurant {
+
+    init(from dicts: [[String: Any]]) {
+        self.init(dicts.map { Restaurant(from: $0) }.compactMap { $0 })
+    }
+
+}

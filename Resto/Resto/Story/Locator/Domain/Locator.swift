@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Promises
 
 class Locator {
 
@@ -26,8 +27,8 @@ class Locator {
 
     // MARK: Search for restaurants
 
-    func findRestaurants() {
-        service.findRestaurants()
+    func findRestaurants() -> Promise<[Restaurant]> {
+        return service.findRestaurants()
     }
     
 }

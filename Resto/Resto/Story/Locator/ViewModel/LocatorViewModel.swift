@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Promises
 
 class LocatorViewModel {
 
@@ -24,7 +25,7 @@ class LocatorViewModel {
 
     // MARK: Actions
 
-    func findRestaurants() {
-        locator.findRestaurants()
+    func findRestaurants() -> Promise<[Restaurant]> {
+        return locator.findRestaurants()
     }
 }

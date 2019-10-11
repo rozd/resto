@@ -9,6 +9,15 @@
           "revision": "c1d14588e5558a3669fd03510d135d88c5109069",
           "version": null
         }
+      },
+      {
+        "package": "Promises",
+        "repositoryURL": "https://github.com/google/promises.git",
+        "state": {
+          "branch": null,
+          "revision": "6b6f4fe3385ed37389fb231bc40be81de2f1230f",
+          "version": "1.2.8"
+        }
       }
     ]
   },

@@ -30,6 +30,9 @@
 		50400BDC2350C0BC00386540 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 50400BDB2350C0BC00386540 /* Alamofire */; };
 		50400BDF2350C1FC00386540 /* Locator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50400BDE2350C1FC00386540 /* Locator.swift */; };
 		50400BE22350C2F700386540 /* Resto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50400BE12350C2F700386540 /* Resto.swift */; };
+		50400BE52350C8EB00386540 /* Promises in Frameworks */ = {isa = PBXBuildFile; productRef = 50400BE42350C8EB00386540 /* Promises */; };
+		50400BE72350D4AF00386540 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50400BE62350D4AF00386540 /* Constants.swift */; };
+		50400BEA2350D55100386540 /* UIKit+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50400BE92350D55100386540 /* UIKit+Alert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +59,8 @@
 		50400BD82350B95500386540 /* LocatorService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocatorService.swift; sourceTree = "<group>"; };
 		50400BDE2350C1FC00386540 /* Locator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Locator.swift; sourceTree = "<group>"; };
 		50400BE12350C2F700386540 /* Resto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resto.swift; sourceTree = "<group>"; };
+		50400BE62350D4AF00386540 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		50400BE92350D55100386540 /* UIKit+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIKit+Alert.swift"; sourceTree = "<group>"; };
 		833AF7B45DF1AD6759F79F23 /* Pods-Resto.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Resto.debug.xcconfig"; path = "Target Support Files/Pods-Resto/Pods-Resto.debug.xcconfig"; sourceTree = "<group>"; };
 		E265FD107BECFA7E8EBE097D /* Pods-Resto.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Resto.release.xcconfig"; path = "Target Support Files/Pods-Resto/Pods-Resto.release.xcconfig"; sourceTree = "<group>"; };
 		F3FBE4EEAA0D37463BF2D144 /* Pods_Resto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Resto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,6 +73,7 @@
 			files = (
 				2518020C324108368C3ED7DD /* Pods_Resto.framework in Frameworks */,
 				50400BDC2350C0BC00386540 /* Alamofire in Frameworks */,
+				50400BE52350C8EB00386540 /* Promises in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,6 +165,7 @@
 		50400BBF2350ABF200386540 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				50400BE82350D53800386540 /* Utils */,
 				50400BCD2350B6E700386540 /* Dependency Injection */,
 				50400BC02350ABF800386540 /* Navigation */,
 			);
@@ -229,8 +236,17 @@
 			isa = PBXGroup;
 			children = (
 				50400BE12350C2F700386540 /* Resto.swift */,
+				50400BE62350D4AF00386540 /* Constants.swift */,
 			);
 			path = Domain;
+			sourceTree = "<group>";
+		};
+		50400BE82350D53800386540 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				50400BE92350D55100386540 /* UIKit+Alert.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		9CCECD162AC99D987D8EEEBD /* Pods */ = {
@@ -270,6 +286,7 @@
 			name = Resto;
 			packageProductDependencies = (
 				50400BDB2350C0BC00386540 /* Alamofire */,
+				50400BE42350C8EB00386540 /* Promises */,
 			);
 			productName = Resto;
 			productReference = 50400B9B2350A76D00386540 /* Resto.app */;
@@ -301,6 +318,7 @@
 			mainGroup = 50400B922350A76D00386540;
 			packageReferences = (
 				50400BDA2350C0BB00386540 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				50400BE32350C8EB00386540 /* XCRemoteSwiftPackageReference "promises" */,
 			);
 			productRefGroup = 50400B9C2350A76D00386540 /* Products */;
 			projectDirPath = "";
@@ -374,9 +392,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				50400BBC2350AB3800386540 /* LocatorViewController.swift in Sources */,
+				50400BE72350D4AF00386540 /* Constants.swift in Sources */,
 				50400BC72350AC4C00386540 /* MainCoordinator.swift in Sources */,
 				50400BC42350AC3900386540 /* LocatorCoordinator.swift in Sources */,
 				50400BE22350C2F700386540 /* Resto.swift in Sources */,
+				50400BEA2350D55100386540 /* UIKit+Alert.swift in Sources */,
 				50400BCF2350B70D00386540 /* Context.swift in Sources */,
 				50400BBE2350AB5800386540 /* LocatorViewModel.swift in Sources */,
 				50400BC22350AC2100386540 /* Coordinator.swift in Sources */,
@@ -600,6 +620,14 @@
 				kind = branch;
 			};
 		};
+		50400BE32350C8EB00386540 /* XCRemoteSwiftPackageReference "promises" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/promises.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.8;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -607,6 +635,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 50400BDA2350C0BB00386540 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		50400BE42350C8EB00386540 /* Promises */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 50400BE32350C8EB00386540 /* XCRemoteSwiftPackageReference "promises" */;
+			productName = Promises;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
