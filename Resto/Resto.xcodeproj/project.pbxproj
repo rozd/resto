@@ -15,6 +15,15 @@
 		50400BAB2350A77100386540 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50400BA92350A77100386540 /* LaunchScreen.storyboard */; };
 		50400BB82350A8AB00386540 /* Locator.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50400BB72350A8AB00386540 /* Locator.storyboard */; };
 		50400BBA2350AA4300386540 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 50400BB92350A90500386540 /* GoogleService-Info.plist */; };
+		50400BBC2350AB3800386540 /* LocatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50400BBB2350AB3800386540 /* LocatorViewController.swift */; };
+		50400BBE2350AB5800386540 /* LocatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50400BBD2350AB5800386540 /* LocatorViewModel.swift */; };
+		50400BC22350AC2100386540 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50400BC12350AC2100386540 /* Coordinator.swift */; };
+		50400BC42350AC3900386540 /* LocatorCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50400BC32350AC3900386540 /* LocatorCoordinator.swift */; };
+		50400BC72350AC4C00386540 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50400BC62350AC4C00386540 /* MainCoordinator.swift */; };
+		50400BCA2350AC7000386540 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50400BC92350AC6F00386540 /* MainViewModel.swift */; };
+		50400BCC2350AFBD00386540 /* LocatorWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50400BCB2350AFBD00386540 /* LocatorWireframe.swift */; };
+		50400BCF2350B70D00386540 /* Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50400BCE2350B70D00386540 /* Context.swift */; };
+		50400BD12350B73400386540 /* MainWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50400BD02350B73400386540 /* MainWireframe.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +36,15 @@
 		50400BAC2350A77100386540 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50400BB72350A8AB00386540 /* Locator.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Locator.storyboard; sourceTree = "<group>"; };
 		50400BB92350A90500386540 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		50400BBB2350AB3800386540 /* LocatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocatorViewController.swift; sourceTree = "<group>"; };
+		50400BBD2350AB5800386540 /* LocatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocatorViewModel.swift; sourceTree = "<group>"; };
+		50400BC12350AC2100386540 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		50400BC32350AC3900386540 /* LocatorCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocatorCoordinator.swift; sourceTree = "<group>"; };
+		50400BC62350AC4C00386540 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		50400BC92350AC6F00386540 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		50400BCB2350AFBD00386540 /* LocatorWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocatorWireframe.swift; sourceTree = "<group>"; };
+		50400BCE2350B70D00386540 /* Context.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Context.swift; sourceTree = "<group>"; };
+		50400BD02350B73400386540 /* MainWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWireframe.swift; sourceTree = "<group>"; };
 		833AF7B45DF1AD6759F79F23 /* Pods-Resto.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Resto.debug.xcconfig"; path = "Target Support Files/Pods-Resto/Pods-Resto.debug.xcconfig"; sourceTree = "<group>"; };
 		E265FD107BECFA7E8EBE097D /* Pods-Resto.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Resto.release.xcconfig"; path = "Target Support Files/Pods-Resto/Pods-Resto.release.xcconfig"; sourceTree = "<group>"; };
 		F3FBE4EEAA0D37463BF2D144 /* Pods_Resto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Resto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,6 +83,7 @@
 		50400B9D2350A76D00386540 /* Resto */ = {
 			isa = PBXGroup;
 			children = (
+				50400BBF2350ABF200386540 /* Library */,
 				50400BB22350A86100386540 /* Story */,
 				50400B9E2350A76D00386540 /* AppDelegate.swift */,
 				50400BA22350A76D00386540 /* ViewController.swift */,
@@ -80,6 +99,7 @@
 		50400BB22350A86100386540 /* Story */ = {
 			isa = PBXGroup;
 			children = (
+				50400BC52350AC3F00386540 /* Main */,
 				50400BB32350A86900386540 /* Locator */,
 			);
 			path = Story;
@@ -91,6 +111,8 @@
 				50400BB62350A89700386540 /* ViewModel */,
 				50400BB52350A88F00386540 /* View */,
 				50400BB42350A88900386540 /* Storyboard */,
+				50400BC32350AC3900386540 /* LocatorCoordinator.swift */,
+				50400BCB2350AFBD00386540 /* LocatorWireframe.swift */,
 			);
 			path = Locator;
 			sourceTree = "<group>";
@@ -106,6 +128,7 @@
 		50400BB52350A88F00386540 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				50400BBB2350AB3800386540 /* LocatorViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -113,8 +136,52 @@
 		50400BB62350A89700386540 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				50400BBD2350AB5800386540 /* LocatorViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		50400BBF2350ABF200386540 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				50400BCD2350B6E700386540 /* Dependency Injection */,
+				50400BC02350ABF800386540 /* Navigation */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		50400BC02350ABF800386540 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				50400BC12350AC2100386540 /* Coordinator.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		50400BC52350AC3F00386540 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				50400BC82350AC6400386540 /* ViewModel */,
+				50400BC62350AC4C00386540 /* MainCoordinator.swift */,
+				50400BD02350B73400386540 /* MainWireframe.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		50400BC82350AC6400386540 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				50400BC92350AC6F00386540 /* MainViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		50400BCD2350B6E700386540 /* Dependency Injection */ = {
+			isa = PBXGroup;
+			children = (
+				50400BCE2350B70D00386540 /* Context.swift */,
+			);
+			path = "Dependency Injection";
 			sourceTree = "<group>";
 		};
 		9CCECD162AC99D987D8EEEBD /* Pods */ = {
@@ -251,8 +318,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50400BBC2350AB3800386540 /* LocatorViewController.swift in Sources */,
+				50400BC72350AC4C00386540 /* MainCoordinator.swift in Sources */,
+				50400BC42350AC3900386540 /* LocatorCoordinator.swift in Sources */,
+				50400BCF2350B70D00386540 /* Context.swift in Sources */,
+				50400BBE2350AB5800386540 /* LocatorViewModel.swift in Sources */,
+				50400BC22350AC2100386540 /* Coordinator.swift in Sources */,
 				50400BA32350A76D00386540 /* ViewController.swift in Sources */,
 				50400B9F2350A76D00386540 /* AppDelegate.swift in Sources */,
+				50400BD12350B73400386540 /* MainWireframe.swift in Sources */,
+				50400BCC2350AFBD00386540 /* LocatorWireframe.swift in Sources */,
+				50400BCA2350AC7000386540 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,6 +484,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TVOS_DEPLOYMENT_TARGET = 12.4;
 			};
 			name = Debug;
 		};
@@ -427,6 +504,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TVOS_DEPLOYMENT_TARGET = 12.4;
 			};
 			name = Release;
 		};

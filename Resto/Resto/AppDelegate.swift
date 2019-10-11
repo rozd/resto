@@ -16,7 +16,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
+        // Firebase configuration
+
         FirebaseApp.configure()
+
+        // Coordination
+
+        let coordinator = MainCoordinator(window: window, viewModel: MainViewModel())
+        _ = coordinator.start()
 
         return true
     }
