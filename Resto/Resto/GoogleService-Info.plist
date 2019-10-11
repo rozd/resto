@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>552184618431-r7etgush1clae40la46htn1978htkvqe.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.552184618431-r7etgush1clae40la46htn1978htkvqe</string>
+	<key>API_KEY</key>
+	<string>AIzaSyB3GXYEG1ZxtP_7cp4JlfqXy8PEi3cZLC0</string>
+	<key>GCM_SENDER_ID</key>
+	<string>552184618431</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.github.rozd.resto</string>
+	<key>PROJECT_ID</key>
+	<string>get-resto</string>
+	<key>STORAGE_BUCKET</key>
+	<string>get-resto.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:552184618431:ios:b57c8267b7ff58f36b950a</string>
+	<key>DATABASE_URL</key>
+	<string>https://get-resto.firebaseio.com</string>
+</dict>
+</plist>
