@@ -35,6 +35,12 @@ class LocatorViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // mapView
+
+        mapView.delegate = self
+
+        // update data
+
         updateRestaurants()
     }
 
@@ -47,19 +53,32 @@ class LocatorViewController: UIViewController {
 
 }
 
-// MARK: - Find Restaurants
+// MARK: - Work with Restaurants
 
 extension LocatorViewController {
 
     func updateRestaurants() {
-        viewModel.findRestaurants()
-            .then { restaurants in
-                print(restaurants)
+
+        let coordinate = mapView.centerCoordinate
+        let radius = mapView.region.largerRadiusInMeters
+
+        viewModel.findRestaurants(coordinate: coordinate, radius: radius)
+            .then { [weak self] annotations in
+                self?.placeRestaurants(annotations: annotations)
             }.catch { [weak self] error in
                 self?.showAlert(withError: error)
             }
     }
 
+    func placeRestaurants(annotations: [RestaurantAnnotation]) {
+        let presentedAnnotations = mapView.annotations.compactMap { $0 as? RestaurantAnnotation }
+
+        let additinalAnnotations = annotations.filter { presentedAnnotations.firstIndex(of: $0) == nil }
+        let redundantAnnotations = presentedAnnotations.filter { annotations.firstIndex(of: $0) == nil }
+
+        mapView.removeAnnotations(redundantAnnotations)
+        mapView.addAnnotations(additinalAnnotations)
+    }
 }
 
 // MARK: - Map Placement
@@ -69,7 +88,7 @@ extension LocatorViewController {
     func map(centerAt location: CLLocation) {
         let coordinate = location.coordinate
 
-        let span = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
+        let span = MKCoordinateSpan(latitudeDelta: 0.025, longitudeDelta: 0.025)
         let region = MKCoordinateRegion(center: coordinate, span: span)
 
         mapView.setRegion(region, animated: true)
@@ -127,6 +146,22 @@ extension LocatorViewController: CLLocationManagerDelegate {
 
 extension LocatorViewController: MKMapViewDelegate {
 
+    func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
+        updateRestaurants()
+    }
 
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        guard let annotation = annotation as? RestaurantAnnotation else {
+            return nil
+        }
+
+        if let view = mapView.dequeueReusableAnnotationView(withIdentifier: annotation.reuseIdentifier) {
+            return view
+        }
+
+        let marker = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: annotation.reuseIdentifier)
+        marker.clusteringIdentifier = annotation.clusteringIdentifer
+        return marker
+    }
 
 }

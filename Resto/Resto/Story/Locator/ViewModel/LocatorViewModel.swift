@@ -8,6 +8,7 @@
 
 import Foundation
 import Promises
+import CoreLocation
 
 class LocatorViewModel {
 
@@ -25,7 +26,18 @@ class LocatorViewModel {
 
     // MARK: Actions
 
-    func findRestaurants() -> Promise<[Restaurant]> {
-        return locator.findRestaurants()
+    func findRestaurants(coordinate: CLLocationCoordinate2D, radius: CLLocationDistance) -> Promise<[RestaurantAnnotation]> {
+        return locator.findRestaurants(criteria: SearchCriteria(coordinate: coordinate, radius: radius))
     }
 }
+
+// MARK: SearchCriteria Serialization
+
+extension SearchCriteria {
+    init(coordinate: CLLocationCoordinate2D, radius: CLLocationDistance) {
+        self.latitude = coordinate.latitude
+        self.longitude = coordinate.longitude
+        self.radius = radius
+    }
+}
+

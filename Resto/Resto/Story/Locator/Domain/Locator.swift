@@ -27,8 +27,11 @@ class Locator {
 
     // MARK: Search for restaurants
 
-    func findRestaurants() -> Promise<[Restaurant]> {
-        return service.findRestaurants()
+    func findRestaurants(criteria: SearchCriteria) -> Promise<[RestaurantAnnotation]> {
+        service.findRestaurants(criteria: criteria).then { rests in
+            print(rests)
+        }
+        return service.findRestaurants(criteria: criteria).then { $0.map { RestaurantAnnotation(restaurant: $0) }}
     }
     
 }

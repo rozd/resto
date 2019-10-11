@@ -8,11 +8,15 @@
 
 import Foundation
 
-struct Restaurant: Codable {
+struct Restaurant: Codable, Equatable {
     let name: String
+    let latitude: Double
+    let longitude: Double
 
     enum CodingKeys: String, CodingKey {
         case name
+        case latitude   = "lat"
+        case longitude  = "lng"
     }
 }
 
@@ -21,6 +25,18 @@ struct Restaurant: Codable {
 extension Restaurant {
 
     init?(from dict: [String: Any]) {
+        guard let geometry = dict["geometry"] as? [String: AnyObject] else {
+            return nil
+        }
+        guard let location = geometry["location"] as? [String: AnyObject] else {
+            return nil
+        }
+        guard let lat = location[CodingKeys.latitude.rawValue] as? Double, let lon = location[CodingKeys.longitude.rawValue] as? Double else {
+            return nil
+        }
+
+        self.latitude = lat
+        self.longitude = lon
         self.name = dict[CodingKeys.name.rawValue] as? String ?? "Unknown"
     }
 

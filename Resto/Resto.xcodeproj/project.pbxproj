@@ -33,6 +33,9 @@
 		50400BE52350C8EB00386540 /* Promises in Frameworks */ = {isa = PBXBuildFile; productRef = 50400BE42350C8EB00386540 /* Promises */; };
 		50400BE72350D4AF00386540 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50400BE62350D4AF00386540 /* Constants.swift */; };
 		50400BEA2350D55100386540 /* UIKit+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50400BE92350D55100386540 /* UIKit+Alert.swift */; };
+		50400BEC2350DEB800386540 /* MapKit+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50400BEB2350DEB800386540 /* MapKit+Helpers.swift */; };
+		50400BEE2350E0BA00386540 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50400BED2350E0BA00386540 /* Search.swift */; };
+		50400BF12350E9AD00386540 /* RestaurantAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50400BF02350E9AD00386540 /* RestaurantAnnotation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +64,9 @@
 		50400BE12350C2F700386540 /* Resto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resto.swift; sourceTree = "<group>"; };
 		50400BE62350D4AF00386540 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		50400BE92350D55100386540 /* UIKit+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIKit+Alert.swift"; sourceTree = "<group>"; };
+		50400BEB2350DEB800386540 /* MapKit+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapKit+Helpers.swift"; sourceTree = "<group>"; };
+		50400BED2350E0BA00386540 /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
+		50400BF02350E9AD00386540 /* RestaurantAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantAnnotation.swift; sourceTree = "<group>"; };
 		833AF7B45DF1AD6759F79F23 /* Pods-Resto.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Resto.debug.xcconfig"; path = "Target Support Files/Pods-Resto/Pods-Resto.debug.xcconfig"; sourceTree = "<group>"; };
 		E265FD107BECFA7E8EBE097D /* Pods-Resto.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Resto.release.xcconfig"; path = "Target Support Files/Pods-Resto/Pods-Resto.release.xcconfig"; sourceTree = "<group>"; };
 		F3FBE4EEAA0D37463BF2D144 /* Pods_Resto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Resto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -212,6 +218,7 @@
 			children = (
 				50400BD32350B8D800386540 /* Restaurant.swift */,
 				50400BD52350B90900386540 /* Entity.swift */,
+				50400BED2350E0BA00386540 /* Search.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -227,6 +234,7 @@
 		50400BDD2350C1ED00386540 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				50400BEF2350E99D00386540 /* VO */,
 				50400BDE2350C1FC00386540 /* Locator.swift */,
 			);
 			path = Domain;
@@ -245,8 +253,17 @@
 			isa = PBXGroup;
 			children = (
 				50400BE92350D55100386540 /* UIKit+Alert.swift */,
+				50400BEB2350DEB800386540 /* MapKit+Helpers.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		50400BEF2350E99D00386540 /* VO */ = {
+			isa = PBXGroup;
+			children = (
+				50400BF02350E9AD00386540 /* RestaurantAnnotation.swift */,
+			);
+			path = VO;
 			sourceTree = "<group>";
 		};
 		9CCECD162AC99D987D8EEEBD /* Pods */ = {
@@ -392,6 +409,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				50400BBC2350AB3800386540 /* LocatorViewController.swift in Sources */,
+				50400BEC2350DEB800386540 /* MapKit+Helpers.swift in Sources */,
 				50400BE72350D4AF00386540 /* Constants.swift in Sources */,
 				50400BC72350AC4C00386540 /* MainCoordinator.swift in Sources */,
 				50400BC42350AC3900386540 /* LocatorCoordinator.swift in Sources */,
@@ -403,10 +421,12 @@
 				50400BA32350A76D00386540 /* ViewController.swift in Sources */,
 				50400B9F2350A76D00386540 /* AppDelegate.swift in Sources */,
 				50400BD92350B95500386540 /* LocatorService.swift in Sources */,
+				50400BF12350E9AD00386540 /* RestaurantAnnotation.swift in Sources */,
 				50400BD42350B8D800386540 /* Restaurant.swift in Sources */,
 				50400BD12350B73400386540 /* MainWireframe.swift in Sources */,
 				50400BDF2350C1FC00386540 /* Locator.swift in Sources */,
 				50400BD62350B90900386540 /* Entity.swift in Sources */,
+				50400BEE2350E0BA00386540 /* Search.swift in Sources */,
 				50400BCC2350AFBD00386540 /* LocatorWireframe.swift in Sources */,
 				50400BCA2350AC7000386540 /* MainViewModel.swift in Sources */,
 			);

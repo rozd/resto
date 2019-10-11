@@ -11,14 +11,14 @@ import Alamofire
 import Promises
 
 protocol LocatorService {
-    func findRestaurants() -> Promise<[Restaurant]>
+    func findRestaurants(criteria: SearchCriteria) -> Promise<[Restaurant]>
 }
 
 class GooglePlacesLocatorService: LocatorService {
 
-    func findRestaurants() -> Promise<[Restaurant]> {
+    func findRestaurants(criteria: SearchCriteria) -> Promise<[Restaurant]> {
         return Promise<[Restaurant]> { fulfill, reject in
-            AF.request("https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.8670522,151.1957362&radius=1500&type=restaurant&keyword=cruise&key=AIzaSyAC8r9awZVAn-KUNIt6EN3obU-j3LPCOgI")
+            AF.request("https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=\(criteria.latitude),\(criteria.longitude)&radius=\(criteria.radius)&type=restaurant&keyword=cruise&key=AIzaSyAC8r9awZVAn-KUNIt6EN3obU-j3LPCOgI")
                 .responseJSON { response in
                     switch response.result {
                     case .success(let json):
