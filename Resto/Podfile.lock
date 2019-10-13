@@ -64,11 +64,9 @@ PODS:
     - nanopb/encode (= 0.3.901)
   - nanopb/decode (0.3.901)
   - nanopb/encode (0.3.901)
-  - Pulsator (0.6.0)
 
 DEPENDENCIES:
   - Firebase/Analytics
-  - Pulsator
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -83,7 +81,6 @@ SPEC REPOS:
     - GoogleDataTransportCCTSupport
     - GoogleUtilities
     - nanopb
-    - Pulsator
 
 SPEC CHECKSUMS:
   Firebase: 5e6b7b12bf9adb90986688edc06b156c37e109cd
@@ -97,8 +94,7 @@ SPEC CHECKSUMS:
   GoogleDataTransportCCTSupport: 862418a8cdda520c4dd4af83a756d04efe4a6990
   GoogleUtilities: f895fde57977df4e0233edda0dbeac490e3703b6
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
-  Pulsator: eb5a9f9be4bdcbd19903984c65deca6aabe50a17
 
-PODFILE CHECKSUM: 60c53fd9b8dcc8e24c1e89c00c01db9c2ee51414
+PODFILE CHECKSUM: ca2795c331619caa934767e28ab107e54f2cf6a5
 
 COCOAPODS: 1.7.4

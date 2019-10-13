@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2518020C324108368C3ED7DD /* Pods_Resto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3FBE4EEAA0D37463BF2D144 /* Pods_Resto.framework */; };
+		50352E8F2351CBB600C9AAE6 /* Pulsar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50352E8E2351CBB600C9AAE6 /* Pulsar.swift */; };
 		50400B9F2350A76D00386540 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50400B9E2350A76D00386540 /* AppDelegate.swift */; };
 		50400BA32350A76D00386540 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50400BA22350A76D00386540 /* ViewController.swift */; };
 		50400BA62350A76D00386540 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50400BA42350A76D00386540 /* Main.storyboard */; };
@@ -40,6 +41,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		50352E8E2351CBB600C9AAE6 /* Pulsar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pulsar.swift; sourceTree = "<group>"; };
 		50400B9B2350A76D00386540 /* Resto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Resto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50400B9E2350A76D00386540 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		50400BA22350A76D00386540 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -88,6 +90,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		50352E8D2351CBA300C9AAE6 /* Pulsar */ = {
+			isa = PBXGroup;
+			children = (
+				50352E8E2351CBB600C9AAE6 /* Pulsar.swift */,
+			);
+			path = Pulsar;
+			sourceTree = "<group>";
+		};
 		50400B922350A76D00386540 = {
 			isa = PBXGroup;
 			children = (
@@ -174,6 +184,7 @@
 		50400BBF2350ABF200386540 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				50352E8D2351CBA300C9AAE6 /* Pulsar */,
 				50400BE82350D53800386540 /* Utils */,
 				50400BCD2350B6E700386540 /* Dependency Injection */,
 				50400BC02350ABF800386540 /* Navigation */,
@@ -436,6 +447,7 @@
 				50400BF12350E9AD00386540 /* RestaurantAnnotation.swift in Sources */,
 				50400BD42350B8D800386540 /* Restaurant.swift in Sources */,
 				50400BD12350B73400386540 /* MainWireframe.swift in Sources */,
+				50352E8F2351CBB600C9AAE6 /* Pulsar.swift in Sources */,
 				50400BDF2350C1FC00386540 /* Locator.swift in Sources */,
 				50400BD62350B90900386540 /* Entity.swift in Sources */,
 				50400BEE2350E0BA00386540 /* Search.swift in Sources */,
