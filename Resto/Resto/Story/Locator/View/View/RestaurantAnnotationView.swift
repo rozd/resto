@@ -78,7 +78,7 @@ class RestaurantAnnotationView: MKAnnotationView {
 
     override func prepareForReuse() {
         super.prepareForReuse()
-        pulsar.stop()
+//        pulsar.stop()
         imageView.image = nil
         busierLabel.text = nil
     }
@@ -93,7 +93,7 @@ class RestaurantAnnotationView: MKAnnotationView {
         pulsar.radiusOfPulse = annotation.pulsarRadius
         pulsar.backgroundColor = annotation.pulsarColor.cgColor
         pulsar.start()
-        
+
         imageView.kf.setImage(with: annotation.photoURL)
 
         busierLabel.text = annotation.busier

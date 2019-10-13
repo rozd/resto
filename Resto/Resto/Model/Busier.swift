@@ -28,8 +28,8 @@ extension Busier {
 
     var pulsarRadius: CGFloat {
         switch self {
-        case .quiet     : return 30
-        case .moderate  : return 35
+        case .quiet     : return 20
+        case .moderate  : return 30
         case .busy      : return 40
         case .veryBusy  : return 50
         }
@@ -37,10 +37,10 @@ extension Busier {
 
     var pulsarColor: UIColor {
         switch self {
-        case .quiet     : return .green
-        case .moderate  : return .orange
-        case .busy      : return .red
-        case .veryBusy  : return .red
+        case .quiet     : return .greenLime
+        case .moderate  : return .yellowMustard
+        case .busy      : return .orangeDeepSaffron
+        case .veryBusy  : return .orangeSmashedPumpkin
         }
     }
 }
