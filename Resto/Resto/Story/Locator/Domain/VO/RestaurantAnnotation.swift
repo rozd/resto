@@ -27,6 +27,25 @@ class RestaurantAnnotation: NSObject, MKAnnotation {
         return nil
     }
 
+    var busier: String {
+        return restaurant.busier.valueForDisplay
+    }
+
+    var pulsarColor: UIColor {
+        return restaurant.busier.pulsarColor
+    }
+
+    var pulsarRadius: CGFloat {
+        return restaurant.busier.pulsarRadius
+    }
+
+    var photoURL: URL? {
+        guard let photoReference = restaurant.photoReference else {
+            return nil
+        }
+        return URL(string: "https://maps.googleapis.com/maps/api/place/photo?maxwidth=240&photoreference=\(photoReference)&key=\(Constants.apiKey)")
+    }
+
     // MARK: Lifecycle
 
     init(restaurant: Restaurant) {

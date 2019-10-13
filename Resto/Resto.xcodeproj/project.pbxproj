@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		2518020C324108368C3ED7DD /* Pods_Resto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3FBE4EEAA0D37463BF2D144 /* Pods_Resto.framework */; };
 		50352E8F2351CBB600C9AAE6 /* Pulsar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50352E8E2351CBB600C9AAE6 /* Pulsar.swift */; };
+		50352E99235326AD00C9AAE6 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 50352E98235326AD00C9AAE6 /* Kingfisher */; };
+		50352E9B2353331D00C9AAE6 /* Busier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50352E9A2353331D00C9AAE6 /* Busier.swift */; };
 		50400B9F2350A76D00386540 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50400B9E2350A76D00386540 /* AppDelegate.swift */; };
 		50400BA32350A76D00386540 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50400BA22350A76D00386540 /* ViewController.swift */; };
 		50400BA62350A76D00386540 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50400BA42350A76D00386540 /* Main.storyboard */; };
@@ -42,6 +44,7 @@
 
 /* Begin PBXFileReference section */
 		50352E8E2351CBB600C9AAE6 /* Pulsar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pulsar.swift; sourceTree = "<group>"; };
+		50352E9A2353331D00C9AAE6 /* Busier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Busier.swift; sourceTree = "<group>"; };
 		50400B9B2350A76D00386540 /* Resto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Resto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50400B9E2350A76D00386540 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		50400BA22350A76D00386540 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -81,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50352E99235326AD00C9AAE6 /* Kingfisher in Frameworks */,
 				2518020C324108368C3ED7DD /* Pods_Resto.framework in Frameworks */,
 				50400BDC2350C0BC00386540 /* Alamofire in Frameworks */,
 				50400BE52350C8EB00386540 /* Promises in Frameworks */,
@@ -233,6 +237,7 @@
 				50400BD32350B8D800386540 /* Restaurant.swift */,
 				50400BD52350B90900386540 /* Entity.swift */,
 				50400BED2350E0BA00386540 /* Search.swift */,
+				50352E9A2353331D00C9AAE6 /* Busier.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -326,6 +331,7 @@
 			packageProductDependencies = (
 				50400BDB2350C0BC00386540 /* Alamofire */,
 				50400BE42350C8EB00386540 /* Promises */,
+				50352E98235326AD00C9AAE6 /* Kingfisher */,
 			);
 			productName = Resto;
 			productReference = 50400B9B2350A76D00386540 /* Resto.app */;
@@ -358,6 +364,7 @@
 			packageReferences = (
 				50400BDA2350C0BB00386540 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				50400BE32350C8EB00386540 /* XCRemoteSwiftPackageReference "promises" */,
+				50352E97235326AD00C9AAE6 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 50400B9C2350A76D00386540 /* Products */;
 			projectDirPath = "";
@@ -447,6 +454,7 @@
 				50400BF12350E9AD00386540 /* RestaurantAnnotation.swift in Sources */,
 				50400BD42350B8D800386540 /* Restaurant.swift in Sources */,
 				50400BD12350B73400386540 /* MainWireframe.swift in Sources */,
+				50352E9B2353331D00C9AAE6 /* Busier.swift in Sources */,
 				50352E8F2351CBB600C9AAE6 /* Pulsar.swift in Sources */,
 				50400BDF2350C1FC00386540 /* Locator.swift in Sources */,
 				50400BD62350B90900386540 /* Entity.swift in Sources */,
@@ -656,6 +664,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		50352E97235326AD00C9AAE6 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.8.3;
+			};
+		};
 		50400BDA2350C0BB00386540 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -675,6 +691,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		50352E98235326AD00C9AAE6 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 50352E97235326AD00C9AAE6 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
 		50400BDB2350C0BC00386540 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 50400BDA2350C0BB00386540 /* XCRemoteSwiftPackageReference "Alamofire" */;

@@ -18,7 +18,7 @@ class GooglePlacesLocatorService: LocatorService {
 
     func findRestaurants(criteria: SearchCriteria) -> Promise<[Restaurant]> {
         return Promise<[Restaurant]> { fulfill, reject in
-            AF.request("https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=\(criteria.latitude),\(criteria.longitude)&radius=\(criteria.radius)&type=restaurant&key=AIzaSyAC8r9awZVAn-KUNIt6EN3obU-j3LPCOgI")
+            AF.request("https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=\(criteria.latitude),\(criteria.longitude)&radius=\(criteria.radius)&type=restaurant&key=\(Constants.apiKey)")
                 .responseJSON { response in
                     switch response.result {
                     case .success(let json):

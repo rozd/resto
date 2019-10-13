@@ -8,6 +8,7 @@
 
 import UIKit
 import MapKit
+import Kingfisher
 
 class RestaurantAnnotationView: MKAnnotationView {
 
@@ -17,7 +18,28 @@ class RestaurantAnnotationView: MKAnnotationView {
         static let pulsarColor      = UIColor(named: "blueCornflower") ?? UIColor.systemPurple
     }
 
-    // MARK: Pulsar
+    // MARK Views
+
+    private lazy var stackView: UIStackView = {
+        let stackView = UIStackView(arrangedSubviews: [imageView, busierLabel])
+        stackView.axis = .vertical
+        stackView.alignment = .fill
+        stackView.spacing = 10.0
+        return stackView
+    }()
+
+    lazy var imageView: UIImageView = {
+        let view = UIImageView(image: nil)
+        view.contentMode = .scaleAspectFill
+        return view
+    }()
+
+    lazy var busierLabel: UILabel = {
+        let label = UILabel()
+        return label
+    }()
+
+    // MARK: Layers
 
     lazy var pulsar: Pulsar = {
         let pulsar = Pulsar()
@@ -42,8 +64,7 @@ class RestaurantAnnotationView: MKAnnotationView {
     override init(annotation: MKAnnotation?, reuseIdentifier: String?) {
         super.init(annotation: annotation, reuseIdentifier: reuseIdentifier)
         self.bounds.size = Constants.viewSize
-        canShowCallout = true
-        calloutOffset = Constants.calloutOffset
+        self.setupCallout()
         self.layer.addSublayer(pulsar)
         self.layer.addSublayer(marker)
         pulsar.start()
@@ -51,6 +72,46 @@ class RestaurantAnnotationView: MKAnnotationView {
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+    }
+
+    // MARK: Annotation lifecycle
+
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        pulsar.stop()
+        imageView.image = nil
+        busierLabel.text = nil
+    }
+
+    override func prepareForDisplay() {
+        super.prepareForDisplay()
+
+        guard let annotation = annotation as? RestaurantAnnotation else {
+            return
+        }
+
+        pulsar.radiusOfPulse = annotation.pulsarRadius
+        pulsar.backgroundColor = annotation.pulsarColor.cgColor
+        pulsar.start()
+        
+        imageView.kf.setImage(with: annotation.photoURL)
+
+        busierLabel.text = annotation.busier
+    }
+
+}
+
+
+// MARK: Callout
+
+extension RestaurantAnnotationView {
+
+    func setupCallout() {
+
+        canShowCallout = true
+        calloutOffset = Constants.calloutOffset
+
+        self.detailCalloutAccessoryView = stackView
     }
 
 }

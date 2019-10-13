@@ -10,4 +10,5 @@ import Foundation
 
 struct Constants {
     static let appName = "Get Resto"
+    static let apiKey  = "AIzaSyAC8r9awZVAn-KUNIt6EN3obU-j3LPCOgI"
 }
