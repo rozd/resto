@@ -15,7 +15,6 @@ class RestaurantAnnotationView: MKAnnotationView {
     struct Constants {
         static let viewSize         = CGSize(width: 12.0, height: 12.0)
         static let calloutOffset    = CGPoint(x: -6.0, y: 0.0)
-        static let pulsarColor      = UIColor(named: "blueCornflower") ?? UIColor.systemPurple
     }
 
     // MARK Views
@@ -45,7 +44,6 @@ class RestaurantAnnotationView: MKAnnotationView {
         let pulsar = Pulsar()
         pulsar.radiusOfPulse = 40.0
         pulsar.numberOfPulses = 2
-        pulsar.backgroundColor = Constants.pulsarColor.cgColor
         return pulsar
     }()
 
@@ -56,6 +54,10 @@ class RestaurantAnnotationView: MKAnnotationView {
         layer.fillColor = UIColor.systemBlue.cgColor
         layer.strokeColor = UIColor.white.cgColor
         layer.lineWidth = 4.0
+        layer.shadowColor = UIColor.systemBlue.cgColor
+        layer.shadowOpacity = 0.2
+        layer.shadowRadius = 8.0
+        layer.shadowOffset = .zero
         return layer
     }()
 

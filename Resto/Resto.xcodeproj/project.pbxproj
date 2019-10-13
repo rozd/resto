@@ -47,7 +47,7 @@
 		50352E8E2351CBB600C9AAE6 /* Pulsar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pulsar.swift; sourceTree = "<group>"; };
 		50352E9A2353331D00C9AAE6 /* Busier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Busier.swift; sourceTree = "<group>"; };
 		50352E9C23539AE600C9AAE6 /* UICollor+Palette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollor+Palette.swift"; sourceTree = "<group>"; };
-		50400B9B2350A76D00386540 /* Resto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Resto.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		50400B9B2350A76D00386540 /* Get Resto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Get Resto.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		50400B9E2350A76D00386540 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		50400BA22350A76D00386540 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		50400BA52350A76D00386540 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -117,7 +117,7 @@
 		50400B9C2350A76D00386540 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				50400B9B2350A76D00386540 /* Resto.app */,
+				50400B9B2350A76D00386540 /* Get Resto.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -337,7 +337,7 @@
 				50352E98235326AD00C9AAE6 /* Kingfisher */,
 			);
 			productName = Resto;
-			productReference = 50400B9B2350A76D00386540 /* Resto.app */;
+			productReference = 50400B9B2350A76D00386540 /* Get Resto.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -617,7 +617,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.rozd.resto.Resto;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Get Resto";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TVOS_DEPLOYMENT_TARGET = 12.4;
@@ -637,7 +637,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.rozd.resto.Resto;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Get Resto";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TVOS_DEPLOYMENT_TARGET = 12.4;

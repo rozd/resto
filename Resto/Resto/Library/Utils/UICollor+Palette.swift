@@ -26,4 +26,8 @@ extension UIColor {
         return UIColor(named: "orangeSmashedPumpkin")!
     }
 
+    class var blueCornflower: UIColor {
+        return UIColor(named: "blueCornflower")!
+    }
+
 }
