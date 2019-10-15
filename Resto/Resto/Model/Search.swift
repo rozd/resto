@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import CoreLocation
 
 struct SearchCriteria {
     let latitude: Double

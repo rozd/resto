@@ -41,6 +41,7 @@
 		50400BEE2350E0BA00386540 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50400BED2350E0BA00386540 /* Search.swift */; };
 		50400BF12350E9AD00386540 /* RestaurantAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50400BF02350E9AD00386540 /* RestaurantAnnotation.swift */; };
 		50400BF4235101A900386540 /* RestaurantAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50400BF3235101A900386540 /* RestaurantAnnotationView.swift */; };
+		50DCF7DE2355DAFC0073FA3F /* SearchCriteria+MapKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DCF7DD2355DAFC0073FA3F /* SearchCriteria+MapKit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +77,7 @@
 		50400BED2350E0BA00386540 /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
 		50400BF02350E9AD00386540 /* RestaurantAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantAnnotation.swift; sourceTree = "<group>"; };
 		50400BF3235101A900386540 /* RestaurantAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantAnnotationView.swift; sourceTree = "<group>"; };
+		50DCF7DD2355DAFC0073FA3F /* SearchCriteria+MapKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchCriteria+MapKit.swift"; sourceTree = "<group>"; };
 		833AF7B45DF1AD6759F79F23 /* Pods-Resto.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Resto.debug.xcconfig"; path = "Target Support Files/Pods-Resto/Pods-Resto.debug.xcconfig"; sourceTree = "<group>"; };
 		E265FD107BECFA7E8EBE097D /* Pods-Resto.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Resto.release.xcconfig"; path = "Target Support Files/Pods-Resto/Pods-Resto.release.xcconfig"; sourceTree = "<group>"; };
 		F3FBE4EEAA0D37463BF2D144 /* Pods_Resto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Resto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -240,6 +242,7 @@
 				50400BD52350B90900386540 /* Entity.swift */,
 				50400BED2350E0BA00386540 /* Search.swift */,
 				50352E9A2353331D00C9AAE6 /* Busier.swift */,
+				50DCF7DD2355DAFC0073FA3F /* SearchCriteria+MapKit.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -444,6 +447,7 @@
 				50400BEC2350DEB800386540 /* MapKit+Helpers.swift in Sources */,
 				50400BE72350D4AF00386540 /* Constants.swift in Sources */,
 				50400BC72350AC4C00386540 /* MainCoordinator.swift in Sources */,
+				50DCF7DE2355DAFC0073FA3F /* SearchCriteria+MapKit.swift in Sources */,
 				50400BC42350AC3900386540 /* LocatorCoordinator.swift in Sources */,
 				50400BE22350C2F700386540 /* Resto.swift in Sources */,
 				50400BEA2350D55100386540 /* UIKit+Alert.swift in Sources */,
