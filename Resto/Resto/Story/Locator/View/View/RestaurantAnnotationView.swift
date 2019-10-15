@@ -19,35 +19,50 @@ class RestaurantAnnotationView: MKAnnotationView {
 
     // MARK Views
 
-    private lazy var stackView: UIStackView = {
-        let stackView = UIStackView(arrangedSubviews: [imageView, busierLabel])
+    fileprivate lazy var stackView: UIStackView = {
+        let stackView = UIStackView(arrangedSubviews: [imageView, busierViewStack])
+        stackView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         stackView.axis = .vertical
         stackView.alignment = .fill
         stackView.spacing = 10.0
         return stackView
     }()
 
-    lazy var imageView: UIImageView = {
+    fileprivate lazy var imageView: UIImageView = {
         let view = UIImageView(image: nil)
+        view.frame.size = CGSize(width: 240.0, height: 148.0)
         view.contentMode = .scaleAspectFill
         return view
     }()
 
-    lazy var busierLabel: UILabel = {
+    fileprivate lazy var busierViewStack: UIStackView = {
         let label = UILabel()
+        label.text = "Busier:"
+        label.font = .preferredFont(forTextStyle: .headline)
+        label.setContentHuggingPriority(.defaultHigh, for: .horizontal)
+        let stackView = UIStackView(arrangedSubviews: [label, busierLabel])
+        stackView.axis = .horizontal
+        stackView.alignment = .fill
+        stackView.spacing = 4.0
+        return stackView
+    }()
+
+    fileprivate lazy var busierLabel: UILabel = {
+        let label = UILabel()
+        label.font = .preferredFont(forTextStyle: .headline)
         return label
     }()
 
     // MARK: Layers
 
-    lazy var pulsar: Pulsar = {
+    fileprivate lazy var pulsar: Pulsar = {
         let pulsar = Pulsar()
         pulsar.radiusOfPulse = 40.0
         pulsar.numberOfPulses = 2
         return pulsar
     }()
 
-    lazy var marker: CAShapeLayer = {
+    fileprivate lazy var marker: CAShapeLayer = {
         let layer = CAShapeLayer()
         layer.path = UIBezierPath(ovalIn: CGRect(origin: .zero, size: Constants.viewSize)).cgPath
         layer.bounds = CGRect(origin: .zero, size: Constants.viewSize)
@@ -80,7 +95,7 @@ class RestaurantAnnotationView: MKAnnotationView {
 
     override func prepareForReuse() {
         super.prepareForReuse()
-//        pulsar.stop()
+        imageView.kf.cancelDownloadTask()
         imageView.image = nil
         busierLabel.text = nil
     }
@@ -98,7 +113,8 @@ class RestaurantAnnotationView: MKAnnotationView {
 
         imageView.kf.setImage(with: annotation.photoURL)
 
-        busierLabel.text = annotation.busier
+        busierLabel.text      = annotation.busier
+        busierLabel.textColor = annotation.pulsarColor
     }
 
 }
