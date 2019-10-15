@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -11,7 +12,7 @@
         <!--Locator View Controller-->
         <scene sceneID="XJ6-ip-Lce">
             <objects>
-                <viewController id="0cQ-RN-On5" customClass="LocatorViewController" customModule="Resto" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="0cQ-RN-On5" customClass="LocatorViewController" customModule="Get_Resto" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lA4-dX-1ku">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -19,17 +20,38 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="VlM-zR-XFe">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kmv-Rc-4Yq">
+                                <rect key="frame" x="11" y="777" width="45" height="45"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="5H8-gj-hQZ"/>
+                                    <constraint firstAttribute="width" constant="45" id="biV-Ti-jSZ"/>
+                                </constraints>
+                                <color key="tintColor" name="blueCornflower"/>
+                                <state key="normal" image="location" catalog="system"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="handleLocationButtonTap:" destination="0cQ-RN-On5" eventType="touchUpInside" id="f9h-dh-JPx"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="VlM-zR-XFe" secondAttribute="bottom" id="DOY-GJ-aou"/>
+                            <constraint firstItem="Kmv-Rc-4Yq" firstAttribute="leading" secondItem="2mv-qg-ZoZ" secondAttribute="leading" constant="11" id="fbX-Kh-Alh"/>
                             <constraint firstItem="VlM-zR-XFe" firstAttribute="top" secondItem="lA4-dX-1ku" secondAttribute="top" id="iMK-oX-8cY"/>
                             <constraint firstItem="VlM-zR-XFe" firstAttribute="leading" secondItem="2mv-qg-ZoZ" secondAttribute="leading" id="iaQ-wc-Ltx"/>
                             <constraint firstItem="VlM-zR-XFe" firstAttribute="trailing" secondItem="2mv-qg-ZoZ" secondAttribute="trailing" id="otr-Dj-3OX"/>
+                            <constraint firstItem="2mv-qg-ZoZ" firstAttribute="bottom" secondItem="Kmv-Rc-4Yq" secondAttribute="bottom" constant="40" id="wdw-wv-TI0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2mv-qg-ZoZ"/>
                     </view>
                     <connections>
+                        <outlet property="locationButton" destination="Kmv-Rc-4Yq" id="cIh-fR-LKt"/>
                         <outlet property="mapView" destination="VlM-zR-XFe" id="8gE-Kp-jbb"/>
                     </connections>
                 </viewController>
@@ -38,4 +60,10 @@
             <point key="canvasLocation" x="163.768115942029" y="51.5625"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="location" catalog="system" width="64" height="60"/>
+        <namedColor name="blueCornflower">
+            <color red="0.38039215686274508" green="0.58431372549019611" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

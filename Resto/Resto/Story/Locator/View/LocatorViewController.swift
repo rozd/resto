@@ -26,6 +26,16 @@ class LocatorViewController: UIViewController {
 
     @IBOutlet fileprivate weak var mapView: MKMapView!
 
+    @IBOutlet weak var locationButton: UIButton! {
+        didSet {
+            locationButton.layer.cornerRadius = 8.0
+            locationButton.layer.masksToBounds = false
+            locationButton.layer.shadowColor = UIColor.blueCornflower.cgColor
+            locationButton.layer.shadowRadius = 40.0
+            locationButton.layer.shadowOpacity = 0.8
+        }
+    }
+
     // MARK: View model
 
     var viewModel: LocatorViewModel!
@@ -51,6 +61,14 @@ class LocatorViewController: UIViewController {
         startUpdateLocationIfAllowed()
     }
 
+    // MARK: Actions
+
+    @IBAction func handleLocationButtonTap(_ sender: Any) {
+        guard let userLocation = locationManager.location else {
+            return
+        }
+        map(centerAt: userLocation)
+    }
 }
 
 // MARK: - Work with Restaurants
