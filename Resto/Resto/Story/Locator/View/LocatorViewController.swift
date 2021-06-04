@@ -9,6 +9,7 @@
 import UIKit
 import CoreLocation
 import MapKit
+import StoreKit
 
 class LocatorViewController: UIViewController {
 
@@ -64,6 +65,13 @@ class LocatorViewController: UIViewController {
     // MARK: Actions
 
     @IBAction func handleLocationButtonTap(_ sender: Any) {
+        if #available(iOS 14.0, *) {
+            if let scene = UIApplication.shared.connectedScenes.first(where: { $0.activationState == .foregroundActive }) as? UIWindowScene {
+                SKStoreReviewController.requestReview(in: scene)
+            }
+        } else {
+            // Fallback on earlier versions
+        }
         guard let userLocation = locationManager.location else {
             return
         }
